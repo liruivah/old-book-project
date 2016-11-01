@@ -1,0 +1,485 @@
+body {
+    font-family: '微软雅黑';
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(147, 202, 201);
+    /**background-image: url('image/bg.png');**/
+    -webkit-transition: background-color 1.25s ease-in-out;
+    transition: background-color 1.25s ease-in-out;
+}
+
+#div1 {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ height: 100%;
+ width: 100%;
+ background: #000000;
+ filter:Alpha(opacity=30);
+}
+#div2 {
+ display: none;
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ padding-top: 10%;
+ z-index: 1001;
+ left: 0px;
+ top: 0px;
+}
+
+.is-focus {
+    background-color: #91A8D0;
+}
+
+body .page {
+    max-width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f9f9f9;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 6px #d4d4d4;
+    min-width: 901px;
+    position: relative;
+}
+
+nav {
+    padding-left: 4em;
+    height: 6em;
+}
+
+nav #logo {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav #logo a {
+    height: 6em;
+    font-family: "Poiret One", WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    color: gray;
+    line-height: 4em;
+    font-size: 2em;
+    font-weight: 400;
+    display: inline;
+    padding-right: 1em;
+}
+
+
+/* logo上升气泡 */
+
+.individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgb(147, 202, 201);
+    z-index: 1;
+}
+
+
+/* end */
+
+nav .nav-item a {
+    display: inline;
+    height: 6em;
+    line-height: 7em;
+    padding: 0 2em;
+    color: gray;
+    font-family: WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    position: relative;
+}
+
+nav .nav-item a:hover {
+    color: #91A8D0;
+}
+
+nav .nav-item li {
+    float: left;
+}
+
+ul {
+    list-style: none;
+}
+
+.signin {
+    position: relative;
+    float: right;
+    margin-right: 5em;
+    margin-top: 3.7em;
+}
+
+.signin h7 {
+    display: inline;
+    font-family: "Poiret One", WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    color: gray;
+    font-size: 1em;
+    margin: 0 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.card {
+    width: 90%;
+    border-radius: 10px;
+    background: white;
+    position: relative;
+    height: 30em;
+    margin: 2.3em auto;
+    box-shadow: 0 3px 12px 6px #d4d4d4;
+    z-index: 2;
+}
+
+.cardlist {
+    width: 90%;
+    border-radius: 2px;
+    background: white;
+    position: relative;
+    height: 19em;
+    margin: 2em auto;
+    box-shadow: 0px 0px 5px 2px #d4d4d4;
+}
+
+footer {
+    position: relative;
+    margin-top: 10em;
+    text-align: center;
+    height: 4em;
+}
+
+.line {
+    width: 0.2em;
+    height: 10em;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 34%;
+    top: 30%;
+    z-index: 10;
+    border-radius: 30px;
+}
+
+.two {
+    left: 66%;
+}
+
+.image {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 76%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.img {
+    width: 25%;
+    height: 55%;
+    cursor: pointer;
+    margin: 0 1.4em;
+    display: inline-block;
+    background-size: contain;
+}
+
+h3 {
+    font-family: roboto;
+    color: gray;
+    font-size: 0.9em;
+    position: relative;
+    padding-top: 1.5em;
+    margin-left: 3em;
+    text-transform: uppercase;
+}
+
+.field-container {
+    float: right;
+    position: relative;
+    top: 2.9em;
+    padding: 0;
+    border: 0;
+    margin-right: 4em;
+    width: 20%;
+    height: 1em;
+    right: 1em;
+}
+
+.field {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em 2em;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(75, 72, 72, 0.1);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.icon-container {
+    position: absolute;
+    top: 0.1em;
+    right: -2.5em;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.icon-search {
+    position: relative;
+    top: 5px;
+    left: 8px;
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+    border-radius: 50%;
+    border: 3px solid #91A8D0;
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1), -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.icon-search:after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    right: -2px;
+    width: 4px;
+    border-radius: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 10px;
+    background-color: #91A8D0;
+}
+
+.icon-close {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 75%;
+    height: 75%;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    border-radius: 50%;
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1), -webkit-transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.icon-close:before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: 2px solid transparent;
+    border-top-color: #91A8D0;
+    border-left-color: #91A8D0;
+    border-bottom-color: #91A8D0;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+.icon-close .x-up {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.icon-close .x-up:before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 3px;
+    width: 50%;
+    height: 2px;
+    background-color: #91A8D0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.icon-close .x-up:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    width: 50%;
+    height: 2px;
+    background-color: #91A8D0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.icon-close .x-down {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.icon-close .x-down:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 50%;
+    height: 2px;
+    background-color: #91A8D0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.icon-close .x-down:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    width: 50%;
+    height: 2px;
+    background-color: #91A8D0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* 当搜索框获得焦点的时候 */
+
+.is-type .icon-close:before {
+    opacity: 1;
+    -webkit-animation: spin 0.85s infinite;
+    animation: spin 0.85s infinite;
+}
+
+.is-type .icon-close .x-up:before,
+.is-type .icon-close .x-up:after {
+    -webkit-animation: color-1 0.85s infinite;
+    animation: color-1 0.85s infinite;
+}
+
+.is-type .icon-close .x-up:after {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.is-type .icon-close .x-down:before,
+.is-type .icon-close .x-down:after {
+    -webkit-animation: color-1 0.85s infinite;
+    animation: color-1 0.85s infinite;
+}
+
+.is-type .icon-close .x-down:before {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.is-type .icon-close .x-down:after {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.field:focus {
+    outline: none;
+    box-shadow: 0px 9px 20px rgba(75, 72, 72, 0.3);
+}
+
+.field:focus + .icon-container .icon-close {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.field:focus + .icon-container .icon-search {
+    opacity: 0;
+    -webkit-transform: translateX(200%);
+    transform: translateX(200%);
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes color-1 {
+    0% {
+        background-color: #BBDEFB;
+    }
+    100% {
+        background-color: #91A8D0;
+    }
+}
+
+@keyframes color-1 {
+    0% {
+        background-color: #BBDEFB;
+    }
+    100% {
+        background-color: #91A8D0;
+    }
+}
+
+
+/* 搜索框结束 */
+
+
+/* 登录按钮 */
+
+#button {
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    width: 40%;
+    display: inline-block;
+    padding: 8px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid transparent;
+    display: inline;
+    margin-right: 1em;
+}
+
+#button:hover {
+    border: 2px solid #91A8D0;
+}
+
+#button a {
+    color: gray;
+}
+
+#button:hover a {
+    color: #91A8D0;
+}
+
+
+/* 登录按钮结束 */
