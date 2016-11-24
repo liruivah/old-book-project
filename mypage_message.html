@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>站内信</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link class="bootstrap library" rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script class="bootstrap library" src="./js/bootstrap.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    <!-- jump to your message -->
+        var sent=1;
+    	function ontableclick(e){
+
+    		var a=e.getElementsByTagName('th')[0].innerHTML;
+    		window.location.href="message_display.html#"+encodeURI(a)+"?ifsent="+sent; 
+
+
+    	}
+
+
+    </script>
+</head>
+<body>
+	<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3>
+				个人页面
+			</h3>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="nav nav-tabs">
+				<li >
+					<a href="mypage.html">个人信息</a>
+				</li>
+				<li>
+					<a href="mypage_product.html">出售管理</a>
+				</li>
+				<li >
+					<a href="mypage_purchase.html">购买记录</a>
+				</li>
+				<li >
+					<a href="mypage_newproduct.html">发布新商品</a>
+				</li>
+				<li class="active">
+					<a href="#">我的站内信</a>
+				</li>
+			</ul>
+		</div>
+		<div class="row-fluid">
+		<div class="col-md-10">
+			<table class="table table-hover" >
+			 	<thead>
+                    <tr>
+                      <th >编号</th>
+                      <th>发件人ID</th>
+                      <th>主题</th>
+                      <th>时间</th>
+                    </tr>
+                  </thead>
+			<tbody>
+				<tr onclick="ontableclick(this)">
+					<th>13579</th>
+					<th>xxx</th>
+					<th>suijiguocheng</th>
+					<th>time</th>
+				</tr>
+				<tr onclick="ontableclick(this)">
+					<th>2 </th>
+					<th>rrxx</th>
+					<th>suijiguocheng</th>
+					<th>time</th>
+				</tr>
+
+			</tbody>
+			</table>
+		</div>
+		<div class="col-md-2">
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+				<li role="presentation" ><a href="mypage_message03.html">新建消息</a></li>
+ 				<li role="presentation" class="active"><a href="#">收件箱</a></li>
+  				<li role="presentation"><a href="mypage_message02.html">发件箱</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+	</div>
+
+
+
+</body>
+</html>
