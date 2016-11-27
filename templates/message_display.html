@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>站内信</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link class="bootstrap library" rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script class="bootstrap library" src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    	var thisURL = document.URL;    
+ 		var a1=thisURL.length;
+ 		var showval=thisURL[a1-1];
+    	function mypageload(e) {
+    		//body...
+    		if(showval==0){
+    			document.getElementById('reply').style.display="none";
+
+    		}
+    	}
+    	var loc=window.location.href;
+    	var n1=loc.indexOf("?");
+    	var n2=loc.indexOf("#")
+    	function onReply(e){
+    		var str=decodeURI(loc.substr(n2+1, n1-n2-1));
+    		//alert(str);  
+    		window.location.href="mypage_message03.html#id="+encodeURI(str); 
+    	}
+
+    </script>
+</head>
+<body onload="mypageload(this)">
+	<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3>
+				个人页面
+			</h3>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="nav nav-tabs">
+				<li >
+					<a href="mypage.html">个人信息</a>
+				</li>
+				<li>
+					<a href="mypage_product.html">出售管理</a>
+				</li>
+				<li >
+					<a href="mypage_purchase.html">购买记录</a>
+				</li>
+				<li >
+					<a href="mypage_newproduct.html">发布新商品</a>
+				</li>
+				<li class="active">
+					<a href="#">我的站内信</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row-fluid">
+{% if message %}
+	<from role="form">
+		<div class="from-group">
+			<label for="SenderName">发件人</label>
+			<input type="text" class="form-control" id="Sendername"   disabled="disabled" value="{{message.Sendername}}">
+		</div>
+		<div class="from-group">
+			<label for="RecevierName">收件人</label>
+			<input type="text" class="form-control" id="RecevierName"  disabled="disabled" value="{{message.RecevierName}}" >
+		</div>
+
+	<div class="from-group">
+			<label for="Subject">主题</label>
+			<input type="text" class="form-control" id="Subject"   disabled="disabled" value="{{message.Subject}}">
+		</div>
+
+		 <div calss="form-group">
+  			<label for="Messagetext">信息内容</label>
+  			<textarea class="form-control" id="Messagetext" rows="6">{{message.text}}</textarea>
+
+  		</div>
+  		<a href="#" class="btn btn-primary btn-lg active" role="button" id="reply" onclick="onReply(this)" >回复</a>
+  		<a href="#" class="btn btn-primary btn-lg active" role="button" onClick="javascript :history.back(-1);">返回</a>
+	</from>
+{% else  %}
+<p>error message </p>
+{% endif %}
+	</div>
+
+
+	</div>
+
+</body>
+</html>

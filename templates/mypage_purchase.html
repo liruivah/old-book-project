@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>购买记录</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link class="bootstrap library" rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script class="bootstrap library" src="../js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3>
+				个人页面
+			</h3>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="nav nav-tabs">
+				<li >
+					<a href="mypage.html">个人信息</a>
+				</li>
+				<li>
+					<a href="mypage_product.html">出售管理</a>
+				</li>
+				<li class="active">
+					<a href="#">购买记录</a>
+				</li>
+				<li>
+					<a href="mypage_newproduct.html">发布新商品</a>
+				</li>
+				<li>
+					<a href="mypage_message.html">我的站内信</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+{% if latest_purchase_list %}
+                <table class="table table-hover" contenteditable="true">
+                  <thead>
+                    <tr>
+                      <th>编号</th>
+                      <th>产品</th>
+                      <th>交易时间</th>
+                      <th>卖家id</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+{% for each purchase in latest_purchase_list %}
+                    <tr>
+                      <td>{{purchase.id}}</td>
+                      <td>{{purchase.name}}</td>
+                      <td>{{purchase.date}}</td>
+                      <td>{{purchase.sellerid}}</td>
+                    </tr>
+{% endfor %}
+                  </tbody>
+                </table>
+{% else %}
+<p> 尚无购买记录 </p>>
+{% endif %}
+              
+		</div>
+
+	</div>
+
+</body>
+</html>
